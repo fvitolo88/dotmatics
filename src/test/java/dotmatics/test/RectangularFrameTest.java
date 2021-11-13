@@ -20,18 +20,18 @@ public class RectangularFrameTest {
             add("* frame *\n");
             add("*********\n");
         }};
-        Assertions.assertIterableEquals(RectangularFrame.printRectangularFrame(values), results);
+        Assertions.assertIterableEquals(RectangularFrame.getRectangularFrameLine(values), results);
     }
 
     @Test
     public void shouldThrowIllegalArgumentExceptionWhenArrayIsEmpty() {
         String[] values = {};
-        Assertions.assertThrows(IllegalArgumentException.class, () -> RectangularFrame.printRectangularFrame(values));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> RectangularFrame.getRectangularFrameLine(values));
     }
 
     @Test
     public void shouldThrowIllegalArgumentExceptionWhenArrayIsNull() {
         String[] values = null;
-        Assertions.assertThrows(IllegalArgumentException.class, () -> RectangularFrame.printRectangularFrame(values));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> RectangularFrame.getRectangularFrameLine(values));
     }
 }

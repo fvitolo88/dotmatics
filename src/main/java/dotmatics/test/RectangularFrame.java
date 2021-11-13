@@ -6,7 +6,7 @@ import java.util.List;
 
 public class RectangularFrame {
 
-    public static List<String> printRectangularFrame(String[] strings) {
+    public static List<String> getRectangularFrameLine(String[] strings) {
         if(strings == null || strings.length == 0)
             throw new IllegalArgumentException("Empty array");
         List<String> lineToPrint = new ArrayList<>();
@@ -18,6 +18,12 @@ public class RectangularFrame {
         }
         lineToPrint.add(borderLine);
         return lineToPrint;
+    }
+
+    public void printRectangularFrame(String[] strings) {
+        if(strings == null || strings.length == 0)
+            throw new IllegalArgumentException("Empty array");
+        getRectangularFrameLine(strings).forEach(System.out::print);
     }
 
     private static String getBorderLine(int maxLength) {
