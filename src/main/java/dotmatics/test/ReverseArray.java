@@ -1,7 +1,5 @@
 package dotmatics.test;
 
-import java.util.Arrays;
-
 public class ReverseArray {
 
     public static int[] reverseArray(int [] values) {

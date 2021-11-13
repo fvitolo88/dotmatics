@@ -20,7 +20,6 @@ public class ReverseArrayTest {
 
     @Test
     public void shouldReturnEmptyArrayWhenInputIsNull() {
-        int[] values = null;
-        Assertions.assertArrayEquals(ReverseArray.reverseArray(values), new int[0]);
+        Assertions.assertArrayEquals(ReverseArray.reverseArray(null), new int[0]);
     }
 }
